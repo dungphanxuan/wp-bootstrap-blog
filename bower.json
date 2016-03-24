@@ -1,0 +1,24 @@
+{
+  "name": "bootstrap-asset",
+  "authors": [
+    "dungphanxuan <dungphanxuan@vccorp.vn>"
+  ],
+  "description": "Bootstrap Assets",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "Bower"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+    "dependencies": {
+	"bootstrap" : "latest"
+  }
+}
