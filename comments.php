@@ -34,6 +34,21 @@ if ( post_password_required() ) {
 				);
 			?>
 		</h2>
+		<?php
+		$args = array(
+
+		'comment_field' =>
+		'<div class="form-group">'.
+
+			'<textarea id="comment" name="comment" placeholder="Express your thoughts, idea or write a feedback by clicking here & start an awesome comment" class="form-control" aria-required="true"></textarea>' .
+			'</div>',
+				   'title_reply' => ''
+				   );
+		?>
+		<div class="well">
+			<h4>Leave a Comment:</h4>
+			<?php comment_form($args);?>
+		</div>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
 		<nav id="comment-nav-above" class="navigation comment-navigation" role="navigation">
@@ -47,14 +62,11 @@ if ( post_password_required() ) {
 		</nav><!-- #comment-nav-above -->
 		<?php endif; // Check for comment navigation. ?>
 
-		<ol class="comment-list">
+		<div class="comment-list">
 			<?php
-				wp_list_comments( array(
-					'style'      => 'ol',
-					'short_ping' => true,
-				) );
+				wp_list_comments( array( 'callback' => 'bootstrap_comment' ) );
 			?>
-		</ol><!-- .comment-list -->
+		</div><!-- .comment-list -->
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
 		<nav id="comment-nav-below" class="navigation comment-navigation" role="navigation">
@@ -78,8 +90,6 @@ if ( post_password_required() ) {
 		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'wp-bootstrap-blog' ); ?></p>
 	<?php
 	endif;
-
-	comment_form();
 	?>
 
 </div><!-- #comments -->

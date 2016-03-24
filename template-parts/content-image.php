@@ -13,7 +13,7 @@
 	<?php if(has_post_thumbnail()) :?>
 	<a href="<?=get_permalink()?>">
 		<?php bootstrap_thumbnail('post-thumbnail'); ?></a>
-	<hr>
+
 	<?php endif ?>
 	<hr>
 	<p><?php the_excerpt(); ?></p>

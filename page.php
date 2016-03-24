@@ -11,7 +11,6 @@
  *
  * @package wp-bootstrap-blog
  */
-
 get_header(); ?>
 
 	<div id="primary" class="row">

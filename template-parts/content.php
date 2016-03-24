@@ -29,5 +29,4 @@
 	<?php the_excerpt(); ?>
 	<a class="btn btn-primary" href="<?=get_permalink()?>">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
 
-	<hr>
 </article>
